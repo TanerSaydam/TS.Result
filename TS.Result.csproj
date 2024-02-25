@@ -8,13 +8,22 @@
     <Title>Result Pattern</Title>
     <Version>8.0.0</Version>
     <Description>This is a result class for .NET</Description>
-    <Copyright>© 2024 Taner Saydam. Tüm hakları saklıdır.</Copyright>
+    <Copyright>© 2024 Taner Saydam. All rights reserved.</Copyright>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TanerSaydam/TS.Result.git</RepositoryUrl>
+    <PackageTags>result</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Company>Taner Saydam</Company>
+    <Authors>Taner Saydam</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
