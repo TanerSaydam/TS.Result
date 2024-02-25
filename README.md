@@ -38,19 +38,19 @@ Result<string> result = "Operation successful.";
 - **For failures**, create a Result object with an HTTP status code and error messages:
 
 ```csharp
-var errorResult = new Result<string>(HttpStatusCode.BadRequest, new List<string> { "Error 1", "Error 2" });
+var errorResult = new Result<string>(400, new List<string> { "Error 1", "Error 2" });
 ```
 
 - **Or** use implicit conversion from error details:
 
 ```csharp
-Result<string> result = (HttpStatusCode.BadRequest, new List<string> { "Error 1", "Error 2" });
+Result<string> result = (400, new List<string> { "Error 1", "Error 2" });
 ```
 
 - **For single error messages**:
 
 ```csharp
-Result<string> result = (HttpStatusCode.BadRequest, "Single error message");
+Result<string> result = (400, "Single error message");
 ```
 
 ## Contributing
