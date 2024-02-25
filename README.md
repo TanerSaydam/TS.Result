@@ -26,24 +26,24 @@ dotnet add package TS.Result
 ## Usage
 - **For a successful operation**, instantiate a Result object with the desired data:
 
-```chsarp
+```csharp
 var successResult = new Result<string>("Operation successful.");
 ```
 
 - **Alternatively**, leverage implicit conversion from data:
-```chsarp
+```csharp
 Result<string> result = "Operation successful.";
 ```
 
 - **For failures**, create a Result object with an HTTP status code and error messages:
 
-```chsarp
+```csharp
 var errorResult = new Result<string>(HttpStatusCode.BadRequest, new List<string> { "Error 1", "Error 2" });
 ```
 
 - **Or** use implicit conversion from error details:
 
-```chsarp
+```csharp
 Result<string> result = (HttpStatusCode.BadRequest, new List<string> { "Error 1", "Error 2" });
 ```
 
