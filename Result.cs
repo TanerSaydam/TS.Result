@@ -41,4 +41,15 @@ public sealed class Result<T>
     {
         return new(parameters.statusCode, parameters.errorMessage);
     }
+
+
+    public static Result<T> Succeed(T data)
+    {
+        return new(data);
+    }
+
+    public static Result<T> Failure(int statusCode, List<string> errorMessages)
+    {
+        return new(statusCode, errorMessages);
+    }
 }
