@@ -52,4 +52,9 @@ public sealed class Result<T>
     {
         return new(statusCode, errorMessages);
     }
+
+    public static Result<T> Failure(int statusCode, string errorMessage)
+    {
+        return new(statusCode, errorMessage);
+    }
 }

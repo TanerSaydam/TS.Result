@@ -59,8 +59,14 @@ Result<string> result = Result<string>.Succeed("Is successful");
 ``` 
 
 - **For error using Failure method**:
+- **One error message**
 ```csharp
 Result<string> result = Result<string>.Failure(500,"Is fail!");
+``` 
+
+- **Multiple error messages**
+```csharp
+Result<string> result = Result<string>.Failure(500,new List<string>() {"Is fail!","Is not unique!"});
 ``` 
 
 ## Contributing
