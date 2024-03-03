@@ -57,4 +57,14 @@ public sealed class Result<T>
     {
         return new(statusCode, errorMessage);
     }
+
+    public static Result<T> Failure(string errorMessage)
+    {
+        return new(500, errorMessage);
+    }
+
+    public static Result<T> Failure(List<string> errorMessages)
+    {
+        return new(500, errorMessages);
+    }
 }
