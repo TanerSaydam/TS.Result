@@ -79,6 +79,30 @@ Result<string> result = Result<string>.Failure("Is fail!"); //return 500 status 
 Result<string> result = Result<string>.Failure(new List<string>() {"Is fail!","Is not unique!"}); //return 500 status code
 ``` 
 
+- **Success Result**
+```csharp
+{
+  "data": {
+    "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9",
+    "refreshToken": "dbfa1ced-6ae1-4120-beea-4d0dbde492e3",
+    "refreshTokenExpires": "2024-05-20T03:51:44.4942877Z"
+  },
+  "errorMessages": null,
+  "isSuccessful": true
+}
+```
+
+- **Error Result**
+```csharp
+{
+  "Data": null,
+  "ErrorMessages": [
+    "Username must be at least 3 characters"
+  ],
+  "IsSuccessful": false
+}
+```
+
 ## Contributing
 We welcome contributions! Feel free to open an issue or submit a pull request on our GitHub repository for any suggestions or improvements.
 
