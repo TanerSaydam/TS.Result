@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace TS.Result;
@@ -8,7 +9,7 @@ public sealed class Result<T>
     public T? Data { get; set; }
     [JsonPropertyName("errorMessages")]
     public List<string>? ErrorMessages { get; set; }
-    [JsonPropertyName("isSuccessful")]
+    [JsonIgnore]
     public bool IsSuccessful { get; set; } = true;
 
     [JsonIgnore]
@@ -47,8 +48,6 @@ public sealed class Result<T>
     {
         return new(parameters.statusCode, parameters.errorMessage);
     }
-
-
     public static Result<T> Succeed(T data)
     {
         return new(data);
@@ -72,5 +71,10 @@ public sealed class Result<T>
     public static Result<T> Failure(List<string> errorMessages)
     {
         return new(500, errorMessages);
+    }
+
+    public override string ToString()
+    {
+        return JsonSerializer.Serialize(this);
     }
 }

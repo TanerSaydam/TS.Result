@@ -80,26 +80,24 @@ Result<string> result = Result<string>.Failure(new List<string>() {"Is fail!","I
 ``` 
 
 - **Success Result**
-```csharp
+```json
 {
   "data": {
     "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9",
     "refreshToken": "dbfa1ced-6ae1-4120-beea-4d0dbde492e3",
     "refreshTokenExpires": "2024-05-20T03:51:44.4942877Z"
   },
-  "errorMessages": null,
-  "isSuccessful": true
+  "errorMessages": null,  
 }
 ```
 
 - **Error Result**
-```csharp
+```json
 {
-  "Data": null,
-  "ErrorMessages": [
+  "data": null,
+  "errorMessages": [
     "Username must be at least 3 characters"
-  ],
-  "IsSuccessful": false
+  ]  
 }
 ```
 
@@ -111,5 +109,4 @@ We welcome contributions! Feel free to open an issue or submit a pull request on
 
 ```rust
 This Markdown formatted README provides a comprehensive guide on how to use the `TS.Result` package, suitable for your project's repository or documentation.
-
 ```
