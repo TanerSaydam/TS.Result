@@ -15,11 +15,13 @@ public sealed class Result<T>
     [JsonIgnore]
     public int StatusCode { get; set; } = (int)HttpStatusCode.OK;
 
+    [JsonConstructor]
     public Result(T data)
     {
         Data = data;
     }
 
+    [JsonConstructor]
     public Result(int statusCode, List<string> errorMessages)
     {
         IsSuccessful = false;
@@ -27,6 +29,7 @@ public sealed class Result<T>
         ErrorMessages = errorMessages;
     }
 
+    [JsonConstructor]
     public Result(int statusCode, string errorMessage)
     {
         IsSuccessful = false;
