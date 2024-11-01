@@ -9,12 +9,13 @@ public sealed class Result<T>
     public T? Data { get; set; }
     [JsonPropertyName("errorMessages")]
     public List<string>? ErrorMessages { get; set; }
-    [JsonIgnore]
+    [JsonPropertyName("isSuccessful")]
     public bool IsSuccessful { get; set; } = true;
 
-    [JsonIgnore]
+    [JsonPropertyName("statusCode")]
     public int StatusCode { get; set; } = (int)HttpStatusCode.OK;
 
+    [JsonConstructor]
     public Result()
     {
     }
