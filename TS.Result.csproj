@@ -1,29 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Result Pattern</Title>
-    <Version>8.0.13</Version>
+    <Version>9.0.01</Version>
     <Description>This is a result class for .NET</Description>
     <Copyright>© 2024 Taner Saydam. All rights reserved.</Copyright>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/TanerSaydam/TS.Result.git</RepositoryUrl>
-    <PackageTags>result</PackageTags>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>result</PackageTags>    
     <Company>Taner Saydam</Company>
     <Authors>Taner Saydam</Authors>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="icon.jpg">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
